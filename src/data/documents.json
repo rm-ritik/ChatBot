@@ -1,0 +1,31 @@
+[
+    {
+      "id": 1,
+      "name": "Project Proposal",
+      "description": "Initial proposal for Q3 project",
+      "category": "Business",
+      "icon": "Description"
+    },
+    {
+      "id": 2,
+      "name": "Meeting Notes",
+      "description": "Notes from client meeting",
+      "category": "Work",
+      "icon": "Note"
+    },
+    {
+      "id": 3,
+      "name": "User Guide",
+      "description": "Instructions for new users",
+      "category": "Documentation",
+      "icon": "MenuBook"
+    },
+    {
+      "id": 4,
+      "name": "Invoice April 2025",
+      "description": "Monthly invoice for services rendered",
+      "category": "Finance",
+      "icon": "ReceiptLong"
+    }
+]
+  

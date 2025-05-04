@@ -12,6 +12,10 @@ import ChecklistIcon from '@mui/icons-material/Checklist';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import StickyNote2Icon from '@mui/icons-material/StickyNote2';
 import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
+import DescriptionIcon from '@mui/icons-material/Description';
+import NoteIcon from '@mui/icons-material/Note';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
+import ReceiptLongIcon from '@mui/icons-material/ReceiptLong';
 
 import './cardItem.css';
 
@@ -19,7 +23,11 @@ const iconMap = {
     Checklist: <ChecklistIcon />,
     WbSunny: <WbSunnyIcon />,
     StickyNote2: <StickyNote2Icon />,
-    CurrencyExchange: <CurrencyExchangeIcon />
+    CurrencyExchange: <CurrencyExchangeIcon />,
+    Description: <DescriptionIcon />,
+    Note: <NoteIcon />,
+    MenuBook: <MenuBookIcon />,
+    ReceiptLong: <ReceiptLongIcon />
 };
 
 function highlightText(text, query) {
