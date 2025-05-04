@@ -122,6 +122,7 @@ button:not(:hover) {
 
   .chatbox-input {
     bottom: 15px;
+    right: 15px;
   }
 }
 
