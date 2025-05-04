@@ -1,4 +1,4 @@
 [
-    { "label": "Apps", "icon": "Apps" },
-    { "label": "Documents", "icon": "Description" }
+    { "label": "Apps", "icon": "Apps", "path": "/apps" },
+    { "label": "Documents", "icon": "Description", "path": "/documents" }
   ]

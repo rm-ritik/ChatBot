@@ -9,6 +9,8 @@ import ListItemText from '@mui/material/ListItemText';
 import AppsIcon from '@mui/icons-material/Apps';
 import DescriptionIcon from '@mui/icons-material/Description';
 
+import {Link} from 'react-router-dom'
+
 const iconMap = {
     Apps: <AppsIcon />,
     Description: <DescriptionIcon />
@@ -21,6 +23,8 @@ function Sidebar(props) {
         {props.options.map((item) => (
           <ListItem key={item.label} disablePadding>
             <ListItemButton
+              component={Link}
+              to = {item.path}
               selected={props.selected === item.label}
               onClick={() => props.onSelect(item.label)}
             >
@@ -39,7 +43,8 @@ Sidebar.propTypes = {
     options: PropTypes.arrayOf(
       PropTypes.shape({
         label: PropTypes.string.isRequired,
-        icon: PropTypes.string
+        icon: PropTypes.string,
+        path: PropTypes.string
       })
     ).isRequired,
     selected: PropTypes.string,

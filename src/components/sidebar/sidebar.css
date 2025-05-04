@@ -35,5 +35,11 @@
   .sidebar .MuiListItemIcon-root {
     color: white;
   }
-  
+
+/* For smaller screens (e.g., mobile) */
+@media (max-width: 600px) {
+    .sidebar {
+      top: 56px;  /* Adjust this value for smaller screens */
+    }
+}
   
