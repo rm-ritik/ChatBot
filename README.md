@@ -1,58 +1,48 @@
-# Frontend Development Challenge: Chatbot Website
+# 💬 Chatbot Web App – React
 
-**Objective:**  
-Create a responsive website using **React JS** with a chatbot interface, navigation elements, and dynamic content handling.
+This repository is a complete solution to the **Frontend Development Challenge** for building a responsive chatbot web application using **React JS**.
 
-## Requirements:
+## 🔍 Features
 
-### Layout:
-- **Navbar:** 
-  - Positioned at the top of the screen.
-  - On the left side, include a "Logo".
-  - On the right side, include a search bar input.
+- 🔝 **Responsive Navbar** with logo and search bar
+- 📂 **Sidebar Menu** for navigating between "Apps" and "Documents" pages
+- 📄 **Scrollable Content Pages** with dynamic search & text highlighting
+- 🤖 **Chatbot Interface** with:
+  - User and bot message bubbles
+  - Timer display
+  - Reset and close actions
+  - Fullscreen mode on mobile
+- ✨ Styled with Material UI (MUI)
 
-- **Side Menu:** 
-  - Positioned on the left side of the screen.
-  - Contains menu items: "Apps", "Documents".
-  - When an item is selected, content corresponding to "Apps Page" or "Documents Page" should be displayed on the right side of the screen.
+---
 
-- **Content Area:**
-  - Each page ("Apps", "Documents") should contain multiple paragraphs of text (using Lorem Ipsum) to ensure the page is scrollable for testing purposes.
+## 📂 Project Structure
 
-### Chatbot:
-- **Icon Button:** 
-  - Positioned at the bottom right of the screen, visible on all pages.
-  - Clicking this button opens the chatbot.
+src/
+├── assets/ # Static files and icons
+├── components/ # Navbar, Sidebar, ParagraphItem, Chatbot, etc.
+├── data/ # sidebarOptions.json documents.json, apps.json
+├── pages/ # Apps.jsx, Documents.jsx
+├── App.jsx # Root component
+├── main.jsx # Entry point
+├── vite.config.js # Vite config
+└── index.css # Global styles
 
-- **Chatbot Window:**
-  - **Dimensions:** Width 400px, Height 600px on desktop views.
-  - **Mobile View:** Full screen when opened on mobile devices.
-  
-  - **Components:**
-    - **Header:** 
-      - Contains two buttons:
-        - **Reset:** Clears all conversation history.
-        - **Close:** Closes the chatbot window.
-      - Displays elapsed time in seconds since opening, updating every second. Reset the timer when the 'Reset' or 'Close' button is clicked.
-    
-    - **Message View:** 
-      - Displays messages in a chat format:
-        - User messages on the right side.
-        - Bot responses on the left side. 
-      - For bot responses, you can use placeholder text or random responses.
+---
 
-    - **Input View:** 
-      - Allows users to type messages.
-      - Messages should be displayed in the message view when the user presses the "Enter" key or clicks the send button.
+## 🚀 Getting Started
 
-## Functionality:
-- **Interactivity:** 
-  - Menu selection should update the content area.
-  - Chatbot should handle sending messages and responding with mock data or placeholders.
-  - **Search Bar:** 
-    - As the user types text into the search bar, only paragraphs containing the typed text should be shown in the content area.
-    - Highlight the matching text within the paragraphs in the view.
+### 1. Clone the Repository
 
-## Technical Specifications:
-- **Frameworks/Libraries:** Use **React JS**.
-- **Version Control:** Create a public repository on GitHub for this project. Include a README with setup instructions, how to run the project, and any decisions you made during development.
+git clone https://github.com/your-username/chatbot-react-solution.git
+cd chatbot-react-solution
+
+### 2. Install Dependencies
+npm install
+
+
+### 3. Start Development Server
+npm run dev
+
+
+Open your browser and go to http://localhost:5173
