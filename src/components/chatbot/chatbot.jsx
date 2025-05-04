@@ -8,6 +8,7 @@ import SendIcon from '@mui/icons-material/Send';
 import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
+import Tooltip from '@mui/material/Tooltip';
 
 export default function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,6 +17,8 @@ export default function Chatbot() {
 
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
+
+  const contentEndRef = useRef(null);
 
   useEffect(() => {
     if (isOpen) {
@@ -29,6 +32,12 @@ export default function Chatbot() {
 
     return () => clearInterval(intervalRef.current);
   }, [isOpen]);
+
+  useEffect(() => {
+    if (contentEndRef.current) {
+      contentEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [messages]);
 
   const handleClose = () => {
     setIsOpen(false);
@@ -78,12 +87,17 @@ export default function Chatbot() {
          <div className="chatbox-topbar">
            <span className="elapsed-time">{elapsedSeconds}s</span>
            <div className="topbar-buttons">
-             <IconButton size="small" onClick={handleReset}>
-               <RestartAltIcon sx={{ color: 'white' }} />
-             </IconButton>
-             <IconButton size="small" onClick={handleClose}>
-               <CloseIcon sx={{ color: 'white' }} />
-             </IconButton>
+            <Tooltip title="Reset">
+              <IconButton size="small" onClick={handleReset}>
+                <RestartAltIcon sx={{ color: 'white' }} />
+              </IconButton>
+            </Tooltip>
+
+            <Tooltip title="Close">
+              <IconButton size="small" onClick={handleClose}>
+                <CloseIcon sx={{ color: 'white' }} />
+              </IconButton>
+            </Tooltip>
            </div>
          </div>
          <div className="chatbox-content">
@@ -95,7 +109,8 @@ export default function Chatbot() {
               <p>{msg.text}</p>
             </div>
           ))}
-          </div>
+          <div ref={contentEndRef} />
+        </div>
          <div className="chatbox-input">
             <TextField
               fullWidth
