@@ -20,15 +20,21 @@ This repository is a complete solution to the **Frontend Development Challenge**
 
 ### 1. Clone the Repository
 
-```git clone https://github.com/your-username/chatbot-react-solution.git
-cd chatbot-react-solution```
+```bash
+git clone https://github.com/your-username/chatbot-react-solution.git
+cd chatbot-react-solution
+```
 
 ### 2. Install Dependencies
-```npm install```
+```bash
+npm install
+```
 
 
 ### 3. Start Development Server
-```npm run dev```
+```bash 
+npm run dev
+```
 
 
 Open your browser and go to http://localhost:5173
