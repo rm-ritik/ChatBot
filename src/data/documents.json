@@ -1,31 +1,23 @@
 [
-    {
-      "id": 1,
-      "name": "Project Proposal",
-      "description": "Initial proposal for Q3 project",
-      "category": "Business",
-      "icon": "Description"
-    },
-    {
-      "id": 2,
-      "name": "Meeting Notes",
-      "description": "Notes from client meeting",
-      "category": "Work",
-      "icon": "Note"
-    },
-    {
-      "id": 3,
-      "name": "User Guide",
-      "description": "Instructions for new users",
-      "category": "Documentation",
-      "icon": "MenuBook"
-    },
-    {
-      "id": 4,
-      "name": "Invoice April 2025",
-      "description": "Monthly invoice for services rendered",
-      "category": "Finance",
-      "icon": "ReceiptLong"
-    }
+  {
+    "id": 1,
+    "content": "Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum."
+  },
+  {
+    "id": 2,
+    "content": "Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc."
+  },
+  {
+    "id": 3,
+    "content": "Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus."
+  },
+  {
+    "id": 4,
+    "content": "Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi."
+  },
+  {
+    "id": 5,
+    "content": "Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante."
+  }
 ]
   

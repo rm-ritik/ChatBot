@@ -1,31 +1,23 @@
 [
-    {
-      "id": 1,
-      "name": "Todo App",
-      "description": "Manage your daily tasks",
-      "category": "Productivity",
-      "icon": "Checklist"
-    },
-    {
-      "id": 2,
-      "name": "Weather App",
-      "description": "Check local weather conditions",
-      "category": "Utilities",
-      "icon": "WbSunny"
-    },
-    {
-      "id": 3,
-      "name": "Notes",
-      "description": "Write and save quick notes",
-      "category": "Productivity",
-      "icon": "StickyNote2"
-    },
-    {
-      "id": 4,
-      "name": "Currency Converter",
-      "description": "Convert between world currencies",
-      "category": "Finance",
-      "icon": "CurrencyExchange"
-    }
+  {
+    "id": 1,
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies."
+  },
+  {
+    "id": 2,
+    "content": "Suspendisse potenti. Morbi mattis ullamcorper velit. Phasellus gravida semper nisi, vel commodo est."
+  },
+  {
+    "id": 3,
+    "content": "Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices."
+  },
+  {
+    "id": 4,
+    "content": "Mauris feugiat, tellus at fringilla cursus, justo erat ultricies leo, eget euismod turpis augue in nulla."
+  },
+  {
+    "id": 5,
+    "content": "Cras sagittis. Praesent egestas tristique nibh. Sed a libero. Pellentesque commodo eros a enim. Suspendisse."
+  }
 ]
   

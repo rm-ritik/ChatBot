@@ -17,7 +17,7 @@ import NoteIcon from '@mui/icons-material/Note';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import ReceiptLongIcon from '@mui/icons-material/ReceiptLong';
 
-import './cardItem.css';
+import './paragraphItem.css';
 
 const iconMap = {
     Checklist: <ChecklistIcon />,
@@ -35,42 +35,22 @@ function highlightText(text, query) {
   const parts = text.split(new RegExp(`(${query})`, 'gi'));
   return parts.map((part, index) =>
     part.toLowerCase() === query.toLowerCase() ? (
-      <span key={index} style={{ backgroundColor: 'yellow' }}>{part}</span>
+      <span key={index} style={{ backgroundColor: 'yellow'}}>{part}</span>
     ) : (
       part
     )
   );
 }
 
-export default function CardItem(props) {
+export default function ParagraphItem(props) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-      <div className="card-icon">
-            {iconMap[props.icon]}
-      </div>
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {highlightText(props.name, props.searchQuery)}
-          </Typography>
-          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-            {highlightText(props.description, props.searchQuery)}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          {highlightText(props.category, props.searchQuery)}
-        </Button>
-      </CardActions>
-    </Card>
+    <div className="paragraph-item-container">
+      {highlightText(props.content, props.searchQuery)}
+    </div>
   );
 }
 
 Card.PropTypes = {
-    name: PropTypes.string,
-    description: PropTypes.string,
-    category: PropTypes.string,
-    icon: PropTypes.string,
+    content: PropTypes.string,
     searchQuery: PropTypes.string
 }

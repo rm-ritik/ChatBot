@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import {useState, useEffect} from 'react';
 
 import appList from '../data/apps.json'
-import CardItem from '../components/cardItem/cardItem';
+import ParagraphItem from '../components/paragraphItem/paragraphItem';
 import './index.css'
 
 export default function Apps(props) {
@@ -15,23 +15,18 @@ export default function Apps(props) {
 
   useEffect(() => {
     const filtered = apps.filter(app =>
-      app.name.toLowerCase().includes(props.searchQuery.toLowerCase()) ||
-      app.description.toLowerCase().includes(props.searchQuery.toLowerCase()) ||
-      app.category.toLowerCase().includes(props.searchQuery.toLowerCase())
+      app.content.toLowerCase().includes(props.searchQuery.toLowerCase())
     );
     setFilteredApps(filtered);
   }, [props.searchQuery, apps]);
 
   return (
-    <div className="card-grid">
+    <div>
       {filteredApps.length > 0 ? (
         filteredApps.map((app) => (
-            <CardItem 
+            <ParagraphItem 
                 key={app.id}
-                name={app.name}
-                description={app.description} 
-                category = {app.category}
-                icon = {app.icon}
+                content={app.content}
                 searchQuery={props.searchQuery}
             />
         ))

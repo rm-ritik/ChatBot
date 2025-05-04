@@ -2,8 +2,9 @@ import PropTypes from 'prop-types';
 import {useState, useEffect} from 'react';
 
 import documentList from '../data/documents.json';
-import CardItem from '../components/cardItem/cardItem';
+import ParagraphItem from '../components/paragraphItem/paragraphItem';
 import './index.css'
+
 
 export default function Documents(props) {
   const [documents, setDocuments] = useState([]);
@@ -15,23 +16,18 @@ export default function Documents(props) {
 
   useEffect(() => {
     const filtered = documents.filter(document =>
-      document.name.toLowerCase().includes(props.searchQuery.toLowerCase()) ||
-      document.description.toLowerCase().includes(props.searchQuery.toLowerCase()) ||
-      document.category.toLowerCase().includes(props.searchQuery.toLowerCase())
+      document.content.toLowerCase().includes(props.searchQuery.toLowerCase())
     );
     setFilteredDocuments(filtered);
   }, [props.searchQuery, documents]);
 
   return (
-    <div className="card-grid">
+    <div>
       {filteredDocuments.length > 0 ? (
         filteredDocuments.map((doc) => (
-            <CardItem 
+            <ParagraphItem 
                 key={doc.id}
-                name={doc.name}
-                description={doc.description} 
-                category = {doc.category}
-                icon = {doc.icon}
+                content={doc.content}
                 searchQuery={props.searchQuery}
             />
         ))
