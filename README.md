@@ -38,3 +38,7 @@ npm run dev
 
 
 Open your browser and go to http://localhost:5173
+
+🌐 Live Demo
+You can also access the project live via GitHub Pages:
+👉 https://rm-ritik.github.io/ChatBot/
