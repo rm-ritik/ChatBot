@@ -1,0 +1,31 @@
+[
+    {
+      "id": 1,
+      "name": "Todo App",
+      "description": "Manage your daily tasks",
+      "category": "Productivity",
+      "icon": "Checklist"
+    },
+    {
+      "id": 2,
+      "name": "Weather App",
+      "description": "Check local weather conditions",
+      "category": "Utilities",
+      "icon": "WbSunny"
+    },
+    {
+      "id": 3,
+      "name": "Notes",
+      "description": "Write and save quick notes",
+      "category": "Productivity",
+      "icon": "StickyNote2"
+    },
+    {
+      "id": 4,
+      "name": "Currency Converter",
+      "description": "Convert between world currencies",
+      "category": "Finance",
+      "icon": "CurrencyExchange"
+    }
+  ]
+  

@@ -83,6 +83,8 @@ export default function NavBar(props) {
             <StyledInputBase
               placeholder="Search…"
               inputProps={{ 'aria-label': 'search' }}
+              value={props.searchQuery}
+              onChange={props.onSearchChange}
             />
           </Search>
         </Toolbar>
@@ -93,5 +95,7 @@ export default function NavBar(props) {
 
 NavBar.propTypes = {
     logo: PropTypes.string.isRequired,
-    onToggleSidebar: PropTypes.func.isRequired
+    onToggleSidebar: PropTypes.func.isRequired,
+    searchQuery: PropTypes.string.isRequired,
+    onSearchChange: PropTypes.func.isRequired
 }
