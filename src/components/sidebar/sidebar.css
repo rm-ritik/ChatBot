@@ -1,0 +1,27 @@
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    position: fixed;
+    top: 64px; /* height of the AppBar */
+    left: 0;
+    background-color: #1976d2; /* Same as MUI primary */
+    color: white; /* text color */
+    overflow-x: hidden;
+    transition: transform 0.3s ease-in-out;
+    z-index: 999; /* below navbar */
+  }
+  
+  .sidebar.hidden {
+    transform: translateX(-100%);
+  }
+  
+  .sidebar.visible {
+    transform: translateX(0);
+  }
+  
+  /* Optional: Style list items */
+  .sidebar .MuiListItemText-root {
+    color: white;
+  }
+  
+  

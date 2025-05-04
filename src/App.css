@@ -1,9 +1,0 @@
-.navbar {
-  position: fixed; /* Stay at the top */
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #ffffff; /* Change to your preferred background */
-  z-index: 1000; /* Ensures it stays above other elements */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow */
-}

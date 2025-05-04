@@ -64,6 +64,7 @@ export default function NavBar(props) {
             color="inherit"
             aria-label="open drawer"
             sx={{ mr: 2 }}
+            onClick={props.onToggleSidebar}
           >
             <MenuIcon />
           </IconButton>
@@ -92,5 +93,6 @@ export default function NavBar(props) {
 }
 
 NavBar.propTypes = {
-    logo: PropTypes.string.isRequired
+    logo: PropTypes.string.isRequired,
+    onToggleSidebar: PropTypes.func.isRequired
 }
