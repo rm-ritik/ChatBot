@@ -2,10 +2,10 @@
     width: 240px;
     height: 100vh;
     position: fixed;
-    top: 64px; /* height of the AppBar */
+    top: 64px;
     left: 0;
-    background-color: #1976d2; /* Same as MUI primary */
-    color: white; /* text color */
+    background-color: #1976d2;
+    color: white;
     overflow-x: hidden;
     transition: transform 0.3s ease-in-out;
     z-index: 999; /* below navbar */
@@ -19,8 +19,20 @@
     transform: translateX(0);
   }
   
-  /* Optional: Style list items */
   .sidebar .MuiListItemText-root {
+    color: white;
+  }
+
+  .sidebar .Mui-selected {
+    background-color: #1565c0  !important;
+    color: white;
+  }
+  
+  .sidebar .Mui-selected:hover {
+    background-color: #1565c0 !important;
+  }
+
+  .sidebar .MuiListItemIcon-root {
     color: white;
   }
   

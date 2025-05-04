@@ -6,27 +6,44 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import AppsIcon from '@mui/icons-material/Apps';
+import DescriptionIcon from '@mui/icons-material/Description';
 
-function Sidebar({ visible }) {
+const iconMap = {
+    Apps: <AppsIcon />,
+    Description: <DescriptionIcon />
+};
+
+function Sidebar(props) {
   return (
-    <div className={`sidebar ${visible ? 'visible' : 'hidden'}`}>
+    <div className={`sidebar ${props.visible ? 'visible' : 'hidden'}`}>
       <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
+        {props.options.map((item) => (
+          <ListItem key={item.label} disablePadding>
+            <ListItemButton
+              selected={props.selected === item.label}
+              onClick={() => props.onSelect(item.label)}
+            >
+              <ListItemIcon>{iconMap[item.icon] || null}</ListItemIcon>
+              <ListItemText primary={item.label} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
     </div>
   );
 }
 
 Sidebar.propTypes = {
-  visible: PropTypes.bool.isRequired
+    visible: PropTypes.bool.isRequired,
+    options: PropTypes.arrayOf(
+      PropTypes.shape({
+        label: PropTypes.string.isRequired,
+        icon: PropTypes.string
+      })
+    ).isRequired,
+    selected: PropTypes.string,
+    onSelect: PropTypes.func.isRequired
 };
 
 export default Sidebar;
