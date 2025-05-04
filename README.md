@@ -16,33 +16,19 @@ This repository is a complete solution to the **Frontend Development Challenge**
 
 ---
 
-## 📂 Project Structure
-
-src/
-├── assets/ # Static files and icons
-├── components/ # Navbar, Sidebar, ParagraphItem, Chatbot, etc.
-├── data/ # sidebarOptions.json documents.json, apps.json
-├── pages/ # Apps.jsx, Documents.jsx
-├── App.jsx # Root component
-├── main.jsx # Entry point
-├── vite.config.js # Vite config
-└── index.css # Global styles
-
----
-
 ## 🚀 Getting Started
 
 ### 1. Clone the Repository
 
-git clone https://github.com/your-username/chatbot-react-solution.git
-cd chatbot-react-solution
+```git clone https://github.com/your-username/chatbot-react-solution.git
+cd chatbot-react-solution```
 
 ### 2. Install Dependencies
-npm install
+```npm install```
 
 
 ### 3. Start Development Server
-npm run dev
+```npm run dev```
 
 
 Open your browser and go to http://localhost:5173
