@@ -8,8 +8,9 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
+
 import PropTypes from 'prop-types';
-import './navbar.css'
+import chatBotLogo from '/ChatBot.svg'
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -67,7 +68,7 @@ export default function NavBar(props) {
           >
             <MenuIcon />
           </IconButton>
-          <img src={props.logo} className='chatbot-logo'/>
+          <img src={chatBotLogo} className='chatbot-logo'/>
           <Typography
             variant="h6"
             noWrap
@@ -94,7 +95,6 @@ export default function NavBar(props) {
 }
 
 NavBar.propTypes = {
-    logo: PropTypes.string.isRequired,
     onToggleSidebar: PropTypes.func.isRequired,
     searchQuery: PropTypes.string.isRequired,
     onSearchChange: PropTypes.func.isRequired

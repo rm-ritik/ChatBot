@@ -1,20 +1,26 @@
 import PropTypes from 'prop-types';
 import {useState, useEffect} from 'react';
 
+import appList from '../data/apps.json'
 import CardItem from '../components/cardItem/cardItem';
 import './index.css'
 
 export default function Apps(props) {
-  const [filteredApps, setFilteredApps] = useState(props.appList);
+  const [apps, setApps] = useState([]);
+  const [filteredApps, setFilteredApps] = useState([]);
 
   useEffect(() => {
-    const filtered = props.appList.filter(app =>
+    setApps(appList);
+  });
+
+  useEffect(() => {
+    const filtered = apps.filter(app =>
       app.name.toLowerCase().includes(props.searchQuery.toLowerCase()) ||
       app.description.toLowerCase().includes(props.searchQuery.toLowerCase()) ||
       app.category.toLowerCase().includes(props.searchQuery.toLowerCase())
     );
     setFilteredApps(filtered);
-  }, [props.searchQuery, props.appList]);
+  }, [props.searchQuery, apps]);
 
   return (
     <div className="card-grid">
@@ -37,14 +43,5 @@ export default function Apps(props) {
 }
 
 Apps.propTypes = {
-  searchQuery: PropTypes.string,
-  appList: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      name: PropTypes.string,
-      description: PropTypes.string,
-      category: PropTypes.string,
-      icon: PropTypes.string
-    })
-  ).isRequired,
+  searchQuery: PropTypes.string
 };

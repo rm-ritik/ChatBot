@@ -1,20 +1,26 @@
 import PropTypes from 'prop-types';
 import {useState, useEffect} from 'react';
 
+import documentList from '../data/documents.json';
 import CardItem from '../components/cardItem/cardItem';
 import './index.css'
 
 export default function Documents(props) {
-  const [filteredDocuments, setFilteredDocuments] = useState(props.documentList);
+  const [documents, setDocuments] = useState([]);
+  const [filteredDocuments, setFilteredDocuments] = useState([]);
 
   useEffect(() => {
-    const filtered = props.documentList.filter(document =>
+    setDocuments(documentList);
+  });
+
+  useEffect(() => {
+    const filtered = documents.filter(document =>
       document.name.toLowerCase().includes(props.searchQuery.toLowerCase()) ||
       document.description.toLowerCase().includes(props.searchQuery.toLowerCase()) ||
       document.category.toLowerCase().includes(props.searchQuery.toLowerCase())
     );
     setFilteredDocuments(filtered);
-  }, [props.searchQuery, props.documentList]);
+  }, [props.searchQuery, documents]);
 
   return (
     <div className="card-grid">
@@ -37,14 +43,5 @@ export default function Documents(props) {
 }
 
 Documents.propTypes = {
-    searchQuery: PropTypes.string,
-    documentList: PropTypes.arrayOf(
-        PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        name: PropTypes.string,
-        description: PropTypes.string,
-        category: PropTypes.string,
-        icon: PropTypes.string
-        })
-    ).isRequired,
+    searchQuery: PropTypes.string
 }
