@@ -21,7 +21,7 @@ This repository is a complete solution to the **Frontend Development Challenge**
 ### 1. Clone the Repository
 
 ```bash
-gh repo clone rm-ritik/ChatBot
+git clone https://github.com/rm-ritik/ChatBot
 cd chatbot-react-solution
 ```
 
