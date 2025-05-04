@@ -22,7 +22,7 @@ This repository is a complete solution to the **Frontend Development Challenge**
 
 ```bash
 git clone https://github.com/rm-ritik/ChatBot
-cd chatbot-react-solution
+cd ChatBot
 ```
 
 ### 2. Install Dependencies
