@@ -1,4 +1,3 @@
-import config from './config';
 import './App.css'
 import NavBar from './components/navbar/navbar'
 import Sidebar from './components/sidebar/sidebar';
@@ -8,7 +7,7 @@ import chatBotLogo from '/ChatBot.svg'
 import sidebarOptions from './data/sidebarOptions.json';
 
 import {useState, useEffect} from 'react';
-import {BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
+import {HashRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
 
 function App() {
   const [sidebarVisible, setSidebarVisible] = useState(true);
@@ -26,7 +25,7 @@ function App() {
 
   return (
     <>
-    <Router basename={config.routerBaseName}>
+    <Router>
       <NavBar 
           className="navbar"
           logo={chatBotLogo} 
