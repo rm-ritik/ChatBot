@@ -60,7 +60,7 @@ export default function CardItem(props) {
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary">
-          {props.category}
+          {highlightText(props.category, props.searchQuery)}
         </Button>
       </CardActions>
     </Card>

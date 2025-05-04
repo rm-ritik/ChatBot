@@ -10,7 +10,8 @@ export default function Apps(props) {
   useEffect(() => {
     const filtered = props.appList.filter(app =>
       app.name.toLowerCase().includes(props.searchQuery.toLowerCase()) ||
-      app.description.toLowerCase().includes(props.searchQuery.toLowerCase())
+      app.description.toLowerCase().includes(props.searchQuery.toLowerCase()) ||
+      app.category.toLowerCase().includes(props.searchQuery.toLowerCase())
     );
     setFilteredApps(filtered);
   }, [props.searchQuery, props.appList]);

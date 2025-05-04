@@ -10,7 +10,8 @@ export default function Documents(props) {
   useEffect(() => {
     const filtered = props.documentList.filter(document =>
       document.name.toLowerCase().includes(props.searchQuery.toLowerCase()) ||
-      document.description.toLowerCase().includes(props.searchQuery.toLowerCase())
+      document.description.toLowerCase().includes(props.searchQuery.toLowerCase()) ||
+      document.category.toLowerCase().includes(props.searchQuery.toLowerCase())
     );
     setFilteredDocuments(filtered);
   }, [props.searchQuery, props.documentList]);
@@ -25,7 +26,7 @@ export default function Documents(props) {
                 description={doc.description} 
                 category = {doc.category}
                 icon = {doc.icon}
-                searchQuery={doc.searchQuery}
+                searchQuery={props.searchQuery}
             />
         ))
       ) : (
